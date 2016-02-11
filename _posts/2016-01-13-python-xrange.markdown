@@ -33,7 +33,7 @@ range(1,11)은 1부터 10까지의 숫자를 데이터로 갖는 리스트를 �
 
 그러면 xrange()의 사용법을 알아보자.
 {% highlight python %}
-for i in range(1, 11): 
+for i in xrange(1, 11): 
 	sum = sum + i 
 
 print(sum) # 55
