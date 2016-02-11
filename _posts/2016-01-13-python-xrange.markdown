@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Python - Xrange
+title: Xrange
 modified:
-categories: 
+categories: Python
 description:
 tags: [python, xrange]
 image:

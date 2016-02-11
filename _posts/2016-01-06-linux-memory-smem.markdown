@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Linux Memory - Smem
+title: Memory - Smem
 modified:
-categories: 
+categories: Linux
 description:
 tags: [linux, memory, smem, smemcap]
 image:

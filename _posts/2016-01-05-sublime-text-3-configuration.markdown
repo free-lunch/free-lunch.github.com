@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Sublime Text 3 - Configuration
+title: Configuration
 modified:
-categories: 
-description:
+categories: Sublime Text 
+description: 
 tags: [sublime, sublimetext3, configuration]
 image: 
   feature: sublime_text3.png
@@ -26,7 +26,7 @@ date: 2016-01-05T06:19:50+00:00
 1. Preferences -> Settings - User에 아래 항목 추가
 
    
-"trim_trailing_white_space_on_save": true aaaa
+"trim_trailing_white_space_on_save": true 
 
 
 2. install package -> trailing space 설치, 자세한 사용방법은 아래에

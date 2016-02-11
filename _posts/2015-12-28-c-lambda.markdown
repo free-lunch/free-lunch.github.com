@@ -1,8 +1,8 @@
 ---
 layout: post
-title: C++ Lambda
+title: Lambda function
 modified:
-categories: 
+categories: C++
 description: 
 tags: [C++, lambda]
 image:
