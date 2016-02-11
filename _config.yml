@@ -42,7 +42,7 @@ titlecase: true
 # Site owner
 owner:
   name: "Jeonghun Jang"
-  avatar: me.jpg
+  avatar: me_low_quality.jpg
   bio: "Describe your self."
   email:
   disqus-shortname:
