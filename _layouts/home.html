@@ -14,7 +14,7 @@
 {% include _navigation.html %}
 
 {% if page.image.feature %}
-  <div class="image-wrap">
+  <div class="image-wrap" style="width:auto; height: 200px; overflow: hidden">
   <img src=
     {% if page.image.feature contains 'http' %}
       "{{ page.image.feature }}"
