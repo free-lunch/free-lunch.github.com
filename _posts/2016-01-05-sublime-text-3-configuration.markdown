@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Configuration
 modified:
 categories: Sublime Text 
@@ -9,7 +10,6 @@ image:
   feature: sublime_text3.png
   credit:
   creditlink:
-comments:
 share:
 date: 2016-01-05T06:19:50+00:00
 ---

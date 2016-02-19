@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Xrange
 modified:
 categories: Python
@@ -9,7 +10,6 @@ image:
   feature: python.png
   credit:
   creditlink:
-comments:
 share:
 date: 2016-01-13T12:58:57+00:00
 ---
