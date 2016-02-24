@@ -36,6 +36,7 @@ function = function_wrapper(function)
 
 
 ## Simple Usage
+
 ~~~ python
 def verbose(func):
     def new_function():
@@ -48,6 +49,7 @@ def verbose(func):
 def my_function():
     print "hello, world."
 ~~~
+
 간단히 사용예제를 살펴보도록 하자. Function 호출 전와 후에 시작과 끝을 해당 Function의 이름과 함께 출력하도록 하였다.
 
 ~~~
@@ -124,6 +126,7 @@ my_function();
 ~~~
 
 출력
+
 ~~~
 Initializing Verbose
 Program start
