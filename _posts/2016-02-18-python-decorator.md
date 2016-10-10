@@ -150,6 +150,9 @@ decorator를 function으로 만든 것과 비슷하다.
 여기서는 Python PERP에서 소개한 다양한 예제에 대해 적을려고 한다.
 가장 많이 사용하는 예는 @classmethod와 @staticmethod라고 하는데,
 아래와 같이도 사용할 수 있기에 참고사항으로 적어놓는다.
+좀 더 많은 예제는 python wiki에 잘 정리되어 있다.
+
+<https://wiki.python.org/moin/PythonDecoratorLibrary>
 
 ### Main 함수가 끝날때 실행되는 함수정의
 
