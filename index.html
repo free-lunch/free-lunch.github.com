@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in site.posts limit:5%}
+    <article class="post">
+
+        <h2>
+        <font size="3" color="black">{{ post.date | date: '%b-%d' }} .</font>
+        <font size="3" color="black">{{ post.categories}} .</font>
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+
+        <font size="3" color="gray">
+        <div class="entry">
+            {{ post.excerpt }}
+        </div>
+    </font>
+
+    </h2>
+
+
+    </article>
+  {% endfor %}
+</div>

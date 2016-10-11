@@ -1,30 +1,20 @@
 ---
 layout: post
 comments: true
-title: Xrange
-modified:
+title: xrange는 무엇인가? (python 2 기준)
 categories: Python
-description:
 tags: [python, xrange]
-image:
-  feature: python.png
-  credit:
-  creditlink:
-share:
 date: 2016-01-13T12:58:57+00:00
 ---
-{% include _toc.html %}
----
 
-## 1. 목적
 Python에서 range와 xrange의 차이를 남기기위해 포스트를 작성하였다.
 앞으로 python을 배우면서 알게된 문법들을 하나씩 남기도록 하려고 한다.
 
-## 2. range() vs xrange()
+##  range() vs xrange()
 일단 range()의 사용법에 대해 먼저 알아보자.
 {% highlight python %}
-for i in range(1, 11): 
-	sum = sum + i 
+for i in range(1, 11):
+	sum = sum + i
 
 print(sum) # 55
 {% endhighlight %}
@@ -34,8 +24,8 @@ range(1,11)은 1부터 10까지의 숫자를 데이터로 갖는 리스트를 �
 
 그러면 xrange()의 사용법을 알아보자.
 {% highlight python %}
-for i in xrange(1, 11): 
-	sum = sum + i 
+for i in xrange(1, 11):
+	sum = sum + i
 
 print(sum) # 55
 {% endhighlight %}
@@ -71,7 +61,7 @@ xrange는 고정된 사이즈의 object만을 이용하여 필요할 때만 값�
 위는 range와 xrange로 실행한 속도를 비교한 것이다.
 xrange는 range에 비해 47%가 소요시간이 감소하였다.
 
-## 3. python 3에서는?
-xrange가 삭제되고, range가 xrange처럼 동작한다 
+##  python 3에서는?
+xrange가 삭제되고, range가 xrange처럼 동작한다
 다만, python3의 range와 python2의 xrange를 비교한다면 xrange가 다소 앞선다.
 <http://stackoverflow.com/questions/15014310/why-is-there-no-xrange-function-in-python3>

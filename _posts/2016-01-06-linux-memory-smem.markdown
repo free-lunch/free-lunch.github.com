@@ -1,31 +1,18 @@
 ---
 layout: post
 comments: true
-title: Memory - Smem
-modified:
+title: 리눅스 메모리 측정방법
 categories: Linux
-description:
 tags: [linux, memory, smem, smemcap]
-image:
-  feature: Smem-viewer.jpg
-  credit:
-  creditlink:
-share:
 date: 2016-01-06T02:01:19+00:00
 ---
-{% include _toc.html %}
----
-
-## 1. 목적
 
 이 글을 쓰게된 이유는 리눅스에서 프로세스별 메모리 사용량을 파악하기 위해서이다.
 
----
-
-## 2. 용어
+##  용어
 프로세스의 메모리를 완벽하게 측정하는 방법은 없다.
- 측정하는 여러 방식 중에서 가장 적합하다고 생각되는 것을 선택을 해야한다. 
-그러기 위해서는 아래와 같은 방식들을 이해를 해야한다. 
+ 측정하는 여러 방식 중에서 가장 적합하다고 생각되는 것을 선택을 해야한다.
+그러기 위해서는 아래와 같은 방식들을 이해를 해야한다.
 
 * VSS : 프로세스와 관계되는 모든 Virtual 메모리의 크기
 * RSS : 프로세스와 관계되는 물리적 페이지의 수
@@ -35,14 +22,13 @@ date: 2016-01-06T02:01:19+00:00
 
 참고 : <http://ecogeo.tistory.com/255>
 
-기본적으로 free나 top을 통해 나오는 메모리 값은 RSS나 VSS이다. 
+기본적으로 free나 top을 통해 나오는 메모리 값은 RSS나 VSS이다.
 즉, 다시말해 free나 top을 통해 나오는 메모리는 실제 사용메모리보다 크게 나온다는 얘기이다.
-정확한 데이터를 위해서는 USS나 PSS를 사용해야 한다. 
+정확한 데이터를 위해서는 USS나 PSS를 사용해야 한다.
 여기서는 PSS를 선택하여 계산하도록 한다.
 
----
 
-## 3. Tool
+## Tool
 우리가 필요한 정보들은 아래에 모두 존재한다.
 
 /proc/$pid/cmdline
@@ -80,4 +66,3 @@ smemcap은 /proc/의 data를 tar로 묶어준다.
 |Read data from capture tarball|smem --source capture.tar.gz|
 |Show a bar chart labeled by pid|smem --bar pid -c "pss uss"|
 |Show a pie chart of RSS labeled by name|smem --pie name -s rss|
-

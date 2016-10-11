@@ -1,19 +1,10 @@
 ---
 layout: post
 comments: true
-title: Lambda function
-modified:
+title: c++에서의 익명함수
 categories: C++
-description: 
 tags: [C++, lambda]
-image:
-  feature: lambda_expression.png
-  credit:
-  creditlink:
-share:
 date: 2015-12-28T04:48:10+00:00
----
-{% include _toc.html %}
 ---
 
 ## What is lambda?
@@ -34,7 +25,7 @@ date: 2015-12-28T04:48:10+00:00
 4. Omitted parameter list : function이 argument를 가지지 않는 케이스
 
 아마 주로 3번 형태를 많이 사용하게 될 것이며, capture-list에 대해 간단히 정리하도록 하자
-(params는 일반 함수 parameter와 동일하게 기재하면 된다). 
+(params는 일반 함수 parameter와 동일하게 기재하면 된다).
 정리하기 앞서 lambda의 간단한 사용예제를 보도록 하자.
 
 ### 1.1 Example
@@ -43,13 +34,13 @@ date: 2015-12-28T04:48:10+00:00
 #include <iostream>
 #include <algorithm>
 #include <functional>
- 
+
 int main()
 {
     std::vector<int> c = {1, 2, 3, 4, 5, 6, 7};
     int x = 5;
     c.erase(std::remove_if(c.begin(), c.end(), [x](int n) { return n < x; }), c.end());
- 
+
     std::cout << "c: ";
     std::for_each(c.begin(), c.end(), [](int i){ std::cout << i << ' '; });
     std::cout << '\n';
@@ -58,12 +49,12 @@ int main()
 
 ### 1.2 Result
 {% highlight cpp %}
-c: 5 6 7 
+c: 5 6 7
 {% endhighlight %}
-위 예제는 vector에서 입력받은 인자보다 작은 값을 가진 요소들을 vector에서 삭제하는 예제이다. 
-std::remove_if는 범위에서 조건에 해당되는 값을 삭제하는 함수이다. 
-조건을 판별하는 인자로 function object or function pointer를 받게되는데, 여기에 lambda를 사용하였다. 
-(remove_if라는 함수는 처음 보았네;; 자세한 내용은 http://www.cplusplus.com/reference/algorithm/remove_if/ 참조) 
+위 예제는 vector에서 입력받은 인자보다 작은 값을 가진 요소들을 vector에서 삭제하는 예제이다.
+std::remove_if는 범위에서 조건에 해당되는 값을 삭제하는 함수이다.
+조건을 판별하는 인자로 function object or function pointer를 받게되는데, 여기에 lambda를 사용하였다.
+(remove_if라는 함수는 처음 보았네;; 자세한 내용은 http://www.cplusplus.com/reference/algorithm/remove_if/ 참조)
 이제 본론으로 Post를 쓰게 된 capture-list를 정리하도록 하자.
 
 ---
@@ -75,12 +66,12 @@ Capture-list를 사용하면, lambda가 있는 scope 영역의 변수를 원하�
 ### 2.1 syntax of capture-list
 {% highlight cpp %}
 1. identifier
-2. identifier ...	
+2. identifier ...
 3. identifier initializer(C++14)
-4. & identifier	
-5. & identifier ...	
+4. & identifier
+5. & identifier ...
 6. & identifier initializer(C++14)
-7. this	
+7. this
 8. &
 9. =
 {% endhighlight %}
@@ -93,7 +84,7 @@ Capture-list를 사용하면, lambda가 있는 scope 영역의 변수를 원하�
 6. by reference and initializer
 7. this copy
 8. capture all variable in scope by reference
-9. capture all variable in scope by value 
+9. capture all variable in scope by value
 
 
 정리를 해보자면 by  reference이냐 by value이냐가 가장 중요하며,
@@ -102,7 +93,7 @@ Capture-list를 사용하면, lambda가 있는 scope 영역의 변수를 원하�
 (ex. [a, &b])
 
 ### 2.2 주의사항
-this와 reference의 사용은 잘 주의한 뒤 사용을 해야한다. 
+this와 reference의 사용은 잘 주의한 뒤 사용을 해야한다.
 reference의 의도치 않은 사용에 대해 알아보자.
 
 {% highlight cpp %}
@@ -140,7 +131,7 @@ void S2::f(int i)
 2번째 구문은 &로 이미 모든 variable이 by reference로 capture 됐기 때문에 중복이라 에러
 3번째도 =로 모든 variable들이 by value로 capture되어 중복이라 에러
 4번째로 동일한 variable을 캡쳐하기에 에러
-여기서 중요한 것은 중복해서 capture를 하면 안된다는 점이다. 
+여기서 중요한 것은 중복해서 capture를 하면 안된다는 점이다.
 이러한 점을 유의해서 사용해야 할 것
 
 ---

@@ -1,20 +1,11 @@
 ---
 layout: post
 comments: true
-title: Python-Profiler
-modified:
+title: 파이썬 프로파일링을 해보자
 categories: Python
-excerpt:
 tags: [python, profiler]
-image:
-  feature:
 date: 2016-07-03T21:20:42+09:00
 ---
-
-{% include _toc.html %}
----
-
-## 시작
 요즘 파이썬으로 알고리즘을 풀고 있는데, 안 풀리는 문제들이 허다하다.. -_-;
 똑같은 알고리즘으로도 안 풀리는 성능상 문제들이 있다.
 그나마 algospot에서는 pypy를 지원해줘서 조~금 더 풀 수 있는 문제가 늘었지만,

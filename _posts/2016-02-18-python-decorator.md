@@ -1,20 +1,12 @@
 ---
 layout: post
 comments: true
-title: Decorator
-modified:
+title: 파이썬 데이코레이터를 써보자
 categories: Python
-excerpt:
 tags: [python, decorator]
-image:
-  feature: python.png
 date: 2016-02-18T16:00:47+09:00
 ---
 
-{% include _toc.html %}
----
-
-## Decorator?
 Decorator는 functions, methods, classes 같은 callable object들을 수정하지 않고 다른 행동을 할 수 있도록 할 수 있다. 일단 Syntax를 살펴보도록 하자.
 
 ## Syntax
