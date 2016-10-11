@@ -2,7 +2,6 @@
 layout: post
 comments: true
 title: 서브라임 세팅
-categories: Sublime Text
 tags: [sublime, sublimetext3, configuration, tool]
 date: 2016-01-05T06:19:50+00:00
 ---

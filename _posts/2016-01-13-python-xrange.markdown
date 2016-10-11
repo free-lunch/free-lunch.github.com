@@ -2,7 +2,6 @@
 layout: post
 comments: true
 title: xrange는 무엇인가? (python 2 기준)
-categories: Python
 tags: [python, xrange]
 date: 2016-01-13T12:58:57+00:00
 ---

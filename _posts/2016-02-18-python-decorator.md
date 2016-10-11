@@ -2,7 +2,6 @@
 layout: post
 comments: true
 title: 파이썬 데이코레이터를 써보자
-categories: Python
 tags: [python, decorator]
 date: 2016-02-18T16:00:47+09:00
 ---

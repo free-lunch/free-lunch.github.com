@@ -2,7 +2,6 @@
 layout: post
 comments: true
 title: 파이썬 프로파일링을 해보자
-categories: Python
 tags: [python, profiler]
 date: 2016-07-03T21:20:42+09:00
 ---

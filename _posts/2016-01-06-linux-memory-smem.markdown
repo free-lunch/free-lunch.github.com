@@ -2,7 +2,6 @@
 layout: post
 comments: true
 title: 리눅스 메모리 측정방법
-categories: Linux
 tags: [linux, memory, smem, smemcap]
 date: 2016-01-06T02:01:19+00:00
 ---
