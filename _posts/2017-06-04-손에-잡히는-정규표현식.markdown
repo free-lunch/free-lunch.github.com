@@ -32,11 +32,11 @@ date: '2017-06-04 00:48'
 #### 1. 마침표는 아무 문자(알파벳,숫자,문장부호 등) 하나와 일치한다.
 
 Example (진한 부분이 매칭된 부분)
->**sale**s1.xls
->orders3.xls
->**sale**s2.xls
->europe2.xls
->정규식 .a..
+>**sale**s1.xls  
+>orders3.xls  
+>**sale**s2.xls  
+>europe2.xls  
+>정규식 .a..  
 
 
 #### 2. 문자집합 [ ]
